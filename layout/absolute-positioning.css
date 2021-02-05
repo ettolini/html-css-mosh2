@@ -1,0 +1,28 @@
+.boxes {
+  border: 3px solid lightgrey;
+  /* To achieve this, the container must have a "relative" position value. */
+  position: relative;
+}
+
+.box {
+  width: 5rem;
+  height: 5rem;
+}
+
+.box-one {
+  background: gold;
+}
+
+.box-two {
+  background: tomato;
+  /* With absolute positioning we can position an element relative to its container, the container should be positioned to "relative for this. */
+  position: absolute;
+  /* Whenever you use a 0 number for length, you don't need to specify an unit. */
+  bottom: 0;
+  right: 0;
+  z-index: 99;
+}
+
+.box-three {
+  background: dodgerblue;
+}

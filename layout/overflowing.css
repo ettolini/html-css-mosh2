@@ -1,0 +1,16 @@
+/* If you fix a size for your elements' box, the content you put inside of them may not fit inside them, this is called "overflow".
+To control its behaviour, you can use the "overflow" property. It's default value is set to "visible", so you see overflow happening.
+You can set it to "hidden", so you won't see the content that causes overflow.
+You can set it to "scroll", so you can scroll down all the content inside the box.
+"Scroll", in some browsers, always show the scroll bars, even if there's no extra content to scroll to, you can fix that with the "auto" value,
+it only shows scroll bars when the scroll option is actually available.  */
+
+.box {
+  border: 3px solid gold;
+  width: 150px;
+  height: 150px;
+  overflow: hidden auto;
+}
+
+/* "overflow" is a short-hand for "overflow-x" and "overflow-y", you can set one value that will aply to both,
+or set them individually, setting the horizontal value first, and the vertical one second. */

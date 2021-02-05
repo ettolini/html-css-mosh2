@@ -1,0 +1,31 @@
+.tweet {
+  border: 3px solid lightgrey;
+}
+
+.avatar {
+  width: 5rem;
+  height: 5rem;
+  background-color: gold;
+  /* floats the avatar elements to the left side of its container, every other subsequent element will now flow around it. */
+  float: left;
+  margin-right: 0.5rem;
+}
+
+/* With this property, you can clear the element from flowing next to a floating element, you can specify the setted floating direction,
+or just set its value to both, so you don't have to make sure to pick the right direction. */
+.clear {
+  clear: both;
+}
+
+/* The problem with floats is that parent elements don't see them, may cause them to collapse.
+But if you make sure you have an element that clears the float after using it, you can fix that.
+
+There's another way to solve the problem, so you don't end up adding meaningless elements just to clear floats. We can use pseudo-elements!*/
+
+.tweet::after {
+  content: "";
+  display: block;
+  /* Remember to set the display to "block", since it's "inline" by default. */
+  clear: both;
+}
+/* Or you could create a "clearfix" class for the container of the floats, and give it those values, so it applies to everything inside it. */

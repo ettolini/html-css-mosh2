@@ -1,0 +1,6 @@
+.first {
+  /* It will look as if the item doesn't exist in the page. */
+  display: none;
+  /* It will hide the item, but the space where is located will remain reserved for it. */
+  visibility: hidden;
+}

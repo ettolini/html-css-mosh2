@@ -1,0 +1,106 @@
+.container {
+  /* We need the display value to be "grid". Now, to make a 3(rows) x 2(columns) grid... */
+  display: grid;
+  /* 3 rows, each 100px tall. */
+  grid-template-rows: 100px 100px 100px;
+  /* 2 columns, each 100px tall. With the Repeat Function, we can simplify our code. */
+  grid-template-columns: repeat(2, 100px);
+  /* Alternatively, we have the "grid-template" property, that includes both rows and columns. */
+  grid-template: repeat(3, 100px) / repeat(2, 100px);
+  border: 3px solid lightgrey;
+  /* We can align its items along the horizontal axis with "justify-items". */
+  justify-items: center;
+  /* We can align its items along the vertical axis with "align-items". */
+  align-items: center;
+  /* We can align the whole content in relation to its container, along the horizontal axis, with "justify-content". */
+  justify-content: center;
+  /* We can align the whole content in relation to its container, along the vertical axis, with "align-content". */
+  align-content: center;
+  height: 100vh;
+}
+
+/* By default, these will be aligned from top left corner to bottom right corner. */
+.box {
+  height: 5rem;
+  width: 5rem;
+  background: grey;
+}
+
+/* align and justify items' value is set to "stretch" by default, this means that if you don't set a specific width or height to those items,
+they will stretch to fill their containers. */
+.container2 {
+  display: grid;
+  /* When setting sizes for rows and columns, using percentage can be tricky, since it calculates its percentage based on the container's total
+  length, so if you were to add another size value that's not a percentage as well, some parts may end up bigger than you meant them to.
+  To fix that, we can use "fractions" (fr), they take the set fraction out the available space. Use them for rows and columns as a best practice. */
+  grid-template-columns: 100px 30fr 70fr;
+  /* You can also set a size value to "auto", that way its size will change to fill the available space left. */
+  grid-template-rows: 100px auto 100px;
+  /* Sets a gap between rows. */
+  row-gap: 10px;
+  /* Sets a gap between columns. */
+  column-gap: 10px;
+  /* Sets a gap between both rows and columns (in that order), if you want them to be the same, just supply a single value. */
+  gap: 10px 20px;
+  border: 3px solid lightblue;
+  height: 100vh;
+}
+
+/* When placing items, you can use "grid-column" or "grid-row" properties. Their functionality is similar.
+There's also the "grid-area" property, It recieves four values (start row, start column, end row, end column), so it moves the item from
+the "start position" to the "end position". Here's a quick example: grid-area: 1 / 1 / 1 / 3; -> from 1,1 to 1,3.
+The following are some examples with grid-column... */
+.box2 {
+  background: blue;
+}
+
+.box2-one {
+  /* Moves item to the second column. The ones that followed it are moved as well. */
+  grid-column: 2;
+}
+
+.box2-two {
+  /* Makes an item occupy more cells, from column 1 to column 4 (check the numbers in DevTools, click at "grid"). */
+  grid-column: 1 / 4;
+}
+
+.box2-three {
+  /* Makes an item occupy from the given cell number up to the last one in the row (that's what -1 represents). */
+  grid-column: 1 / -1;
+}
+
+.box2-four {
+  /* The Span Keyword tells the item the number of cells it's gonna occupy, from the given one. */
+  grid-column: 1 / span 3;
+}
+
+/* You can also position items by defining areas and indicating in which area which item should go. */
+.container3 {
+  display: grid;
+  grid-template: 100px auto 100px / 30fr 70fr;
+  /* We define the areas and their names. Every quote ("") contains a row, every cell separated by a space. */
+  grid-template-areas:
+    "header  header"
+    "sidebar main"
+    /* If you want a cell to by empty, use a dot (.). */
+    ".       footer";
+  gap: 10px;
+  border: 3px solid lightgreen;
+  height: 100vh;
+}
+
+.box3 {
+  background: green;
+}
+
+/* When defining where an item should locate, we don't need to use quotes (it won't work if you do). */
+.box3-one {
+  /* Ocuppies both headers. */
+  grid-area: header;
+}
+
+.box3-four {
+  /* Occupies the footer area, the empty cell is left as it is. */
+  grid-area: footer;
+}
+/* You can check area names in DevTools by checking the "grid". */

@@ -1,0 +1,58 @@
+/* We can also use FlexBoxes to size items, but these properties shouldn't be applied to containers, but the items themselves. */
+.container {
+  border: 3px solid limegreen;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 30vh;
+}
+
+.box {
+  /* "flex-basis"'s value is set to "auto" so the browser uses "width"'s value instead, but if we give it a value, it overwrites the other.
+  Why does it affect the "width" and not the "length"? Because we set the "flex-direction" in the container to "row". */
+  flex-basis: 10rem;
+  width: 5rem;
+  height: 5rem;
+  background: lightgreen;
+  margin: 1rem;
+}
+
+/* We can also apply it individually. */
+.box-one {
+  flex-basis: 5rem;
+}
+
+/* There's the "flex-grow" and "flew-shrink" properties, they are set to 0 by default, the greater the value we give them, the greater their
+growth or shrinking. In this example, we give two boxes a growth value of 1, and we give the left one a value of 2. This would join those
+values to have a result number that represents all the available horizontal space (because the flex-direction is "row"), being 4, and then
+divide said number for each box, a box would grow to occupy 2 space values, and the others would grow to occupy 1 space value each.
+You would use the "flex-shrink" when there's not enough space in the container and you want to define how boxes should shrink to fit. */
+.container2 {
+  border: 3px solid deeppink;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 30vh;
+}
+
+.box2 {
+  flex-grow: 1;
+  width: 5rem;
+  height: 5rem;
+  background: lightsalmon;
+  margin: 1rem;
+}
+
+.box2-one {
+  flex-grow: 2;
+}
+
+/* There's also a shortcut for"flex-grow", "flex-shrink" and "flex-basis": "flex". */
+.box2-two {
+  /* If you supply a single, it'll be for "flex-grow", if you supply two,
+    those would either be for "flex-grow" and either "flex-basis" or "flex-shrink" (remember "shrink" doesn't take size units),
+    if you supply three, then those would be for "grow", "shrink" and "basis". */
+  flex: 1 1 15rem;
+}

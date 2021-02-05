@@ -1,0 +1,87 @@
+.container {
+  border: 3px solid goldenrod;
+  /* Enabling the "flex" value allows us to easily control the boxes display positioning */
+  display: flex;
+  /* We can manipulate flex with the flex-direction property */
+  flex-direction: row;
+  /* It's value is "row" by default, so it shows its elements in a row direction. We can also set it to column, "column-reverse"
+  (the same, but display order is reversed), and row-reverse. */
+}
+
+.box {
+  width: 5rem;
+  height: 5rem;
+  background: gold;
+  margin: 1rem;
+}
+
+/* We can align items with flex by using the axis. There are two different axis, the row axis and the column axis,
+each of them having their own main and secondary (named "cross") direction. The row axis' main direction is the horizontal one,
+and the vertical its cross one; it's the other way around with the column axis.
+
+There are two methods to achieve this alignment: "justify-content" to align content along the main axis,
+and "align-items" to align content along the cross axis. */
+
+.container2 {
+  border: 3px solid darkslategrey;
+  display: flex;
+  flex-direction: row;
+  /* "justify-content"'s default value is "flex-start", if you set it to "flex-end", you'll send your items to the end of the horizontal axis.
+  There's also "center" to center the items, "space-evenly" to distribute the items with even space between them and the borders,
+  "space-between" pushes the first and last items to the ends of the horizontal axis and the rest are distributed with even space between them... */
+  justify-content: flex-end;
+  /* "align-items"'s default value is also "flex-start", and you can also give it a bunch of different values. */
+  align-items: flex-end;
+  height: 25vh;
+}
+
+.box2 {
+  width: 5rem;
+  height: 5rem;
+  background: lightsteelblue;
+  margin: 1rem;
+}
+
+/* The third container has too many boxes, the boxes' size is shrunk to fit them inside it in a single line, we can fix that behaviour with
+the "flex-wrap" property. */
+.container3 {
+  border: 3px solid darkcyan;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  /* It's value is set to "nowrap" by default (which makes its items fit in one line), but we can change it to "wrap" so it takes multiple lines. */
+  flex-wrap: wrap;
+  /* There's also the "align-content" property, which aligns the lines or content inside the container. */
+  align-content: center;
+  height: 50vh;
+}
+
+.box3 {
+  width: 5rem;
+  height: 5rem;
+  background: dodgerblue;
+  margin: 1rem;
+}
+
+/* We can also align individual content with the "align-self" property. */
+.container4 {
+  border: 3px solid darkred;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 50vh;
+}
+
+.box4 {
+  width: 5rem;
+  height: 5rem;
+  background: tomato;
+  margin: 1rem;
+}
+
+.box-one {
+  /* Makes "box-one" to be at the top of the container. */
+  align-self: flex-start;
+}

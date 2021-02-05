@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.box {
+  background: gold;
+  padding: 1rem;
+}
+
+/* Targets the second occurrence of a box element. */
+.box:nth-of-type(2) {
+  background: dodgerblue;
+}
+
+/* If the screen size is greater than 600px and lesser than 900px, the container's flex direction is set to "row". */
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  .container {
+    flex-direction: row;
+  }
+}
+
+/* If the screen size is greater than 900px, the boxes' color changes. */
+@media screen and (min-width: 900px) {
+  .box {
+    background: silver;
+  }
+  .box:nth-of-type(2) {
+    background: tomato;
+  }
+}
+
+/* "print" refers to how the page looks when printing (can check the changes in the printing preview). */
+@media print {
+  body {
+    /* For printing fonts, it's recommended to use points (pt), other units work, but aren't as reliable when printing. */
+    font-size: 12pt;
+  }
+
+  .box {
+    /* For margins and paddings, centimeters or inches are recommended. */
+    padding: 0.5cm;
+  }
+}

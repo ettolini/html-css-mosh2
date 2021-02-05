@@ -1,0 +1,39 @@
+div {
+  width: 100px;
+  height: 100px;
+  background-color: gold;
+  padding: 20px;
+  border: 10px solid orange;
+  /* If you leave those rules like that, the box's overall size won't be 100x100, as originally intended. It'd be 160x160,
+    the padding's and border's length would be added to the original size. And that's because the "box-sizing" property is set to "content-box"
+    by default, if you want to make sure the element's box stays the legth you set it to, no matter the padding or border added,
+    you should manually set its value to "border-box". Keep in mind, this means the content's size may have to be reduced to fit everything.
+    Note: the margin doesn't affect the box's size, it represents space between other boxes. */
+}
+
+*,
+/* This is the universal selector, in case you need to set a certain value to every element in your HTML */
+*::before,
+*::after {
+  /* Doesn't work with pseudo-elements by default, but you can manually change that (*::before, *::after) */
+  box-sizing: border-box;
+}
+
+div::before {
+  content: "Hello";
+}
+
+/* Inline elements don't respect width and height properties by default */
+span {
+  width: 100px;
+  height: 100px;
+  background-color: gold;
+  /* Inline elements have the display property set to "inline" by default, block elements to "block".
+    In this case, you could set a span's display property to "inline-block", so it'll be added in the same line as other objects,
+    but still respect the size properties that you set for it */
+  display: inline-block;
+}
+
+/* Note: If you want inline elements to be next to each other, in your HTML,
+you could put them next to each other instead of separating them with a space or line,
+due to those being interpreted as a single space displayed in the page. */

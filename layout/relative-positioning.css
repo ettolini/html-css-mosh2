@@ -1,0 +1,31 @@
+.boxes {
+  border: 3px solid lightgrey;
+}
+
+.box {
+  width: 5rem;
+  height: 5rem;
+}
+
+.box-one {
+  background: gold;
+}
+
+.box-two {
+  background: tomato;
+  /* By default, an element's position is "static", which means they aren't position, they just stay where they appear.
+  "relative" allows to position the element relative to its original position */
+  position: relative;
+  /* "left" adds the specified space to the element's left side (can use negative values, which would add space to the right side).
+  This change modifies the element's position if not static (even if it puts them off the screen). There's also the "right" property. */
+  left: 2rem;
+  /* There's also the "top" and "bottom" properties, that work similarly. Note that these don't affect the other boxes' position. */
+  top: 5rem;
+  /* The z-access represents "depth", can move an element closer (positive values) or away (negative values) from the user.
+  This means, putting it before or behind other elements. */
+  z-index: -1;
+}
+
+.box-three {
+  background: dodgerblue;
+}

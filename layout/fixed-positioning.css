@@ -1,0 +1,39 @@
+/* Making the body element shorter so we can scroll and check the results... */
+body {
+  margin: 10px;
+  /* Makes it 200% the size of the viewport */
+  height: 200vh;
+}
+
+.boxes {
+  border: 3px solid lightgrey;
+  position: relative;
+}
+
+.box {
+  width: 5rem;
+  height: 5rem;
+}
+
+.box-one {
+  background: gold;
+}
+
+.box-two {
+  background: tomato;
+  /* Fixed positioning makes sure the element always stays in the same position, no matter where we scroll in the page. */
+  position: fixed;
+  /* box-two is fixed to always be at the top, even breaking out of its container */
+  top: 0;
+  /* If you specify that the element should have said space in between borders, nothing would happen, because it already has a fixed size... */
+  left: 2rem;
+  right: 2rem;
+  /* ... But if you set the width (in this case) to auto, then the browser decides the width of the element,
+  depeding on the other properties' conditions */
+  width: auto;
+  z-index: 99;
+}
+
+.box-three {
+  background: dodgerblue;
+}

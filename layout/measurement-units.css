@@ -1,0 +1,32 @@
+.box {
+  /* Fixes the width to ALWAYS be 50 pixels */
+  width: 50px;
+  /* Fixes the height to ALWAYS be 100 pixels */
+  height: 100px;
+  background-color: gold;
+}
+
+.box2 {
+  /* 50% of the width of the parent */
+  width: 50%;
+  /* 100% of the height of the parent, block-level elements by default have a 0 height, and re-ajust it to fix their content. Keep that in mind */
+  height: 100%;
+  background-color: silver;
+}
+
+.box3 {
+  /* 50% of the width of the viewport (what the user can currently view) */
+  width: 50vw;
+  /* 100% of the height of the viewport (what the user can currently view) */
+  height: 100vh;
+  background-color: greenyellow;
+}
+
+.box4 {
+  /* em -> 5 times font size of the current element. If there's no font size set, it inherits from its father,
+  if the father doesn't have one either, it uses the default one set by the browser */
+  width: 5em;
+  /* rem -> 10 times font size of the root element, this way you don't need to trace the "font size hierarchy" */
+  height: 10rem;
+  background-color: hotpink;
+}
