@@ -1,0 +1,22 @@
+body {
+  margin: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  /* The first font is the one to be used, if the browser doesn't have it installed, it'll display the second one, and so on.
+  But, the last one, is a general category, if the browser gets to this, it'll use whatever font available from that family it decides to. */
+}
+
+h1 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  /* "Times New Roman" is between quotes because the font name has spaces. */
+}
+
+p {
+  font-weight: bold;
+  /* If using numbers for font weight... The lower the number, the thinner the font. The greater the numbers, the thicker the font. */
+  font-style: italic;
+  font-size: 1rem;
+  color: #333;
+  /* When setting numbers in hexadecimal form, if your first three numbers are equal to the latter three,
+  you can just type the former three and it'll be the same result.
+  Tip: Not recommended to set your body text color to pure black, it's better if you use lighter tone like #111, #222, or #333. */
+}

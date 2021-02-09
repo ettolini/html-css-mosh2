@@ -1,0 +1,19 @@
+body {
+  margin: 10px;
+  font-size: 1rem;
+  line-height: 1.5;
+  /* word-spacing allows you to control the spacing between words. */
+  word-spacing: 5px;
+}
+
+h1 {
+  /* With letter-spacing you can control the spacing between letters. Recommended to use pixels for them, can also use negative values. */
+  letter-spacing: -1px;
+}
+
+p {
+  /* You should pay attention to line lenght, the best is to keep your lines with 50-70 characters each.
+    In this case, to control that with out paragraphs, we give them a width of 50ch. "ch" is realative to the width of the "0" character.
+    Now, why do we set it to 50? Because there are some characters' width that is less than 0, keeping lines roughly around 60 characters each. */
+  width: 50ch;
+}

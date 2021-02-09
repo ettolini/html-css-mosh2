@@ -1,0 +1,13 @@
+body {
+  margin: 10px;
+  font-size: 1.5rem;
+  /* Line-height is usually set to 1.5 times the font size, but don't take it as a "magic number", try what you like.
+  That said, if you supply the line-height without an unit, the given value will work as a multiplier, so you won't need to do the math. */
+  line-height: 1.5;
+}
+
+/* For font sizes and text spacing, is better to use relative values instead of absolute ones (like pixels).
+That way our spacing will always be respected. */
+h1 {
+  margin: 3rem 0 1rem;
+}

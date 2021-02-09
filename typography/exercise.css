@@ -1,0 +1,24 @@
+#container {
+  margin: 0 auto;
+  font-size: 1.8rem;
+  font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
+  padding: 0 1.8rem;
+  color: #222;
+}
+
+h1 {
+  font-family: "Crimson Pro";
+}
+
+h2,
+h3 {
+  font-family: "Noto Sans JP";
+}
+
+p {
+  font-size: 2rem;
+}
+
+img {
+  width: 100%;
+}

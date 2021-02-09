@@ -1,0 +1,37 @@
+body {
+  margin: 10px;
+  /* You can change your pages' read direction with this attribute. "ltr = left to right", "rtl = right to left". */
+  direction: ltr;
+}
+
+/* We're going to trunk the first paragraph, for this, we need to set four different attributes. */
+#p1 {
+  /* white-space controles text wraping. "nowrap" makes the whole paragraph to be in one line of text. */
+  white-space: nowrap;
+  /* We need to set a specified with for our line... */
+  width: 50ch;
+  /* We hide the overflow, so we won't see the extra text. */
+  overflow: hidden;
+  /* And if we set text-overflow to "ellipsis" we'll get "..." at the end of the line. */
+  text-overflow: ellipsis;
+  border: 3px solid gold;
+}
+
+/* With this selector, every paragraph that comes after a paragraph will have these rules. */
+p + p {
+  /* text-align controls your text alignment. Is set to "left" by default, and is usually the best way to go. */
+  text-align: left;
+  /* text-indent adds identation to the first line of your text. */
+  text-indent: 1rem;
+  /* text-decoration decorates text, another common value for it is "line-through". */
+  text-decoration: underline;
+  /* text-transform converts text to lower case, upper case, capitalize... (every word's first letter is upper case). */
+  text-transform: capitalize;
+
+  /* Divides our paragraph in two columns. */
+  column-count: 2;
+  /* Determines the gap size between columns. */
+  column-gap: 2rem;
+  /* Adds a line between the columns. */
+  column-rule: 3px dotted goldenrod;
+}
