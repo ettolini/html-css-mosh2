@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+}
+
+.menu {
+  color: lightgrey;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background: #2a2138;
+  width: 100%;
+}
+
+.item:hover {
+  background: #221a2e;
+}
+
+.fas {
+  text-align: center;
+  width: 2rem;
+  padding: 1rem;
+  padding-left: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .menu {
+    width: 20%;
+    height: 100vh;
+  }
+}

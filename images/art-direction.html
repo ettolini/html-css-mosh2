@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <picture>
+      <!-- With the media attribute we control what image we show depending on the screen size.
+      In this case, we show the same image, but with a different proportion so it looks good in every device. -->
+      <source
+        media="(max-width: 500px)"
+        srcset="mosh-images/meal-cropped.jpg"
+      />
+      <source media="(min-width: 501px)" srcset="mosh-images/meal.jpg" />
+      <img src="mosh-images/meal.jpg" alt="" />
+    </picture>
+  </body>
+</html>

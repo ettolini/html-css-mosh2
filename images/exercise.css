@@ -1,0 +1,71 @@
+body {
+  height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  background: url(etto/etto1440.jpg) no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  text-shadow: 0.1rem 0.1rem #000;
+  font-weight: 900;
+  letter-spacing: 0.1rem;
+  font-size: 4.5rem;
+}
+
+p {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 0.4rem;
+  font-weight: 300;
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 1228px) {
+  body {
+    background: url(etto/etto1388.jpg) no-repeat;
+    background-size: cover;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 853px) {
+  body {
+    background: url(etto/etto914.jpg) no-repeat;
+    background-size: cover;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  p {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  body {
+    background: url(etto/etto320.jpg) no-repeat;
+    background-size: cover;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+}

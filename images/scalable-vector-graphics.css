@@ -1,0 +1,5 @@
+/* This sets a vector image (.svg) as background, since they're mathematically generated, they look sharp in all sizes.
+Be sure to use them for logos, icons and backgrounds! Also remember to access them with the url() function. */
+body {
+  background: url(mosh-images/constellation.svg);
+}

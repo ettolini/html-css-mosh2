@@ -1,0 +1,5 @@
+.meal {
+  width: 400px;
+}
+/* This technique only works for fixed size images (like pixels). And you shouldn't always use it, since having multiple image sizes takes
+space. You should only use it when you really need your images to look sharp. */

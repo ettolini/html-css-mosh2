@@ -1,0 +1,14 @@
+body {
+  /* You can set a background image with the background attribute or the background-image attribute. */
+  background: url(mosh-images/bg-sanfrancisco.jpg);
+  /* Background images get repeated by default if they don't fit the entire background, but we can control that behavior.
+  no-repeat shows the image once, repeat-x repeats the image until it fills the horizontal space, there's also repeat-y... */
+  background-repeat: no-repeat;
+  /* Background images are placed in the top left corner, you can re-position them with background-position. You first supply a value for the 
+  horizontal movement, and the other for the vertical movement. It can also work with negative values and keywords. */
+  background-position: 100% 100px;
+  /* This one can also recieve keywords, "cover" covers the entire background, resizing the image all the while keeping its aspect ratio. */
+  background-size: cover;
+  /* You can use this to make an image still, even when scrolling down and up a page. The content will move, but not the image. */
+  background-attachment: fixed;
+}

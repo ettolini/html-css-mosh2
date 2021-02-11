@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Sometimes you need to apply resolution switching because devices with same pixel ratio have a significant resolution difference.
+    For this, you can provide different images as well, but providing them with the width value (ex: 400w), represents the actual image width.
+    To check how many image sizes you should provide, check out the website "responsivebreakpoints.com". -->
+    <img
+      src="mosh-images/meal.jpg"
+      alt="A bowl of salmon and curry"
+      class="meal"
+      srcset="
+        mosh-images/meal.jpg     400w,
+        mosh-images/meal@2x.jpg  800w,
+        mosh-images/meal@3x.jpg 1200w
+      "
+      sizes="
+      (max-width: 500px) 100vw,
+      (max-width: 700px) 50vw,
+      33vw
+      "
+    />
+    <!-- With the sizes attribute you can control how much of the screen the image will occupy depending on its size (the device). -->
+  </body>
+</html>

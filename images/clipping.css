@@ -1,0 +1,5 @@
+/* Google "css clip generator" we can choose or make the template we need. The page will provide the template's css code. */
+.meal {
+  /* This is said code, we apply it as a rule for the image we want to clip, and there you go! */
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}

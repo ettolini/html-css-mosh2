@@ -1,0 +1,8 @@
+/* Google "css filter functions" to find out every filter option in css.
+If you apply the "hover" pseudo-class selector, these effects will take place when you hover your mouse over the image. */
+.meal:hover {
+  /* As functions, they can receive parameters to define how much they affect the image. */
+  filter: grayscale(70%) blur(3px);
+}
+/* There are only two browsers that don't support filters: Internet Explorer and Opera Mini. If you need filtered images in those browsers,
+you'll have to use other software like Photoshop to filter them beforehand. */

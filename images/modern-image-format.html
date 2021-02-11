@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- When working with webp images, we use the picture and source tags, inside them we also apply the img tag.
+    The img tag takes care of adding an alt attribute and makes the image available for browsers like Internet Explorer.
+    source need a type value (image folder and image type), and a srcset value (image path). -->
+    <picture>
+      <source type="mosh-images/webp" srcset="mosh-images/meal.webp" />
+      <source type="mosh-images/jpg" srcset="mosh-images/meal.jpg" />
+      <img src="mosh-images/meal.jpg" alt="A bowl of salmon and curry" />
+    </picture>
+    <!-- You may be interested in using webp because their size is considerably lower, their resolution as well, but it's almost unnoticeable.
+    To achieve this, look for a webp converter online and do the work. -->
+  </body>
+</html>
