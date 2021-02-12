@@ -1,0 +1,30 @@
+.box {
+  background: chocolate;
+  width: 200px;
+  height: 200px;
+  border: 3px solid darkred;
+}
+
+.box:hover {
+  /* We can use translateZ() to move the element closer to or farer away from the user.
+  By itself, that function has no effect, we first need to define a "perspective",
+  which represents the default distance between the element and the user. Positive translate() values move the element closer,
+  negative ones move it farer, always relative to the set perspective value; */
+  transform: perspective(200px) translateZ(-50px);
+  /* The rotate() function rotates from the z-axis, but there's also rotateX() and rotateY().
+  Those function keep the element's origin as the center of their rotation, but you can also modify that with "transform-origin".
+  The first value is for the x-axis, and the other for the y-axis. They go from the top left corner ("0 0") to the bottom right one ("100% 100%")*/
+  transform-origin: 0 50%;
+}
+
+/* In case you want the transformations to happen to a group of boxes when you hover over one of them, you can store them inside a container.
+If you're gonna use a perspective, you'll need to use the perspective attribute in your container,
+otherwise your boxes will have each their different perspective and results may look weird. */
+.container {
+  perspective: 200px;
+}
+/* Effects when you hover over a container class element, but only on box class elements that are the container's children. */
+.container:hover .box {
+  transform: rotateY(45deg);
+  transform-origin: 0 50%;
+}

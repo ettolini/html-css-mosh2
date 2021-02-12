@@ -1,0 +1,28 @@
+.box {
+  width: 100px;
+  height: 100px;
+  background: darkred;
+  /* You can control your transformations transitions with the "transition" attribute. Apply this to the element itself, not the action.
+    You can set how many seconds the transition takes, the speed-rate (set to linear by default, makes the transition flow in a linear rate).
+    You can alternatively set it to ease-in (starts slow, ends fast), ease-out (the other way around).
+    There's also the cubic-bezier rate, if you go to "cubicbezier.com", you can make a custom animation rate and paste its parameters into it.
+    The last attribute defines the set delay for the transformation to start after hoving over your mouse. */
+  transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+}
+
+.box:hover {
+  transform: rotate(45deg);
+}
+
+.box2 {
+  width: 100px;
+  height: 100px;
+  background: darkslateblue;
+  /* You can also control multiple changes in one go. */
+  transition: transform 0.5s, background 0.5s;
+}
+
+.box2:hover {
+  transform: rotate(45deg);
+  background: darkslategrey;
+}

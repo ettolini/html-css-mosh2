@@ -1,0 +1,32 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background: gold;
+}
+
+.box:hover {
+  /* "transform: rotate()" rotates the element the specified number of degrees, can also use negative values. */
+  transform: rotate(15deg);
+  /* "transform: scale()" resizes the element. */
+  transform: scale(1.5);
+  /* "transform: skew()" tilts the element the specified number of degrees. Can also use negative values.
+  Positive values tilt elements to the left, negative ones to the right. */
+  transform: skew(15deg);
+  /* "transform: translate()" moves the element. The first value handles the x-axis, the second value handles the y-axis.
+  Can use negative values, but keep in mind that for the y-axis, the positive value moves it down, and the negative one up.
+  translate() functions use hardware acceleration, which means, greater performance than other positioning methods. */
+  transform: translate(10px, 10px);
+}
+
+.box2:hover {
+  /* You can also combine transformations to apply them on one go, note that the order of transformations matter and WILL affect your results.
+    Also note that translate() is a shortcut for both translateX() and translateY(). */
+  transform: rotate(45deg) translateX(50px);
+}

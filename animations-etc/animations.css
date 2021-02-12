@@ -1,0 +1,51 @@
+body {
+  width: 100vh;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* First you define an animation with "@keyframes" and then its name.
+The percentage represents the frame position in which the specified animation happens. */
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+
+  25% {
+    transform: scale(1.3);
+  }
+
+  50% {
+    transform: rotate(45deg);
+    background: tomato;
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background: firebrick;
+  /* You need to specify the animation to use with its name. */
+  animation-name: pop;
+  /* Don't forget to specify the animation duration, otherwise it won't start. */
+  animation-duration: 4s;
+  /* You can set a delay before the animation starts. */
+  animation-delay: 1s;
+  /* With this, you can set how many times the animation will play. */
+  animation-iteration-count: infinite;
+  /* You can use the same values as before: linear, ease-in, ease-out, cubic-bezier... */
+  animation-timing-function: ease-out;
+  /* It's default value is normal, which means the animation follows the path you originally set for it.
+  If you set it to "reverse", it'll be animated in reverse. "Alternate" alternates between "normal" and "reverse" (starting with normal).
+  "Alternate-reverse" does the same, but this one starts with the "reverse" path. */
+  animation-direction: alternate;
+  /* If you type "ani" VS Code gives you an option that has the format of all the previous attributes, to make things faster. */
+}
+
+/* You can find new animations in "animate.style", just bring their links into your HTML doc and apply the animation classes you want. */
