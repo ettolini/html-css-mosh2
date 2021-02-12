@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styling-forms.css" />
+  </head>
+  <body>
+    <form>
+      <div class="form-group">
+        <!-- Use labels with their "for" attribute to identify inputs, if you click them, their input will be focused on. -->
+        <label for="name">Name</label>
+        <!-- Type "text" inputs receive text. -->
+        <input id="name" type="text" />
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <!-- Type "email" inputs receive text and identifies by their format if they're a valid email address or not. -->
+        <input id="email" type="email" />
+      </div>
+      <!-- "Submit" buttons submit input form data. -->
+      <button type="submit">Register</button>
+      <!-- "Reset" buttons clear whatever you typed in your forms. -->
+      <button type="reset">Clear</button>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+    />
+    <link rel="stylesheet" href="text-fields.css" />
+  </head>
+  <body>
+    <form action="">
+      <!-- Number inputs can only receive numbers, it won't work trying to type anything else. On phones, the keyboard will only show numbers. -->
+      <input type="number" />
+      <!-- Password inputs hide what you're typing. -->
+      <input type="password" />
+      <!-- Date inputs provide a calendar to choose a date from. -->
+      <input type="date" />
+      <!-- Textarea allows us to type multiple lines of text. Cols are the number of columns (char per line), and rows the number of lines. -->
+      <textarea cols="30" rows="10"></textarea>
+
+      <!-- The value attribute provides a default value shown in the input.
+        Placeholder is a custom text shown to indicate what to type in the submit.
+        Maxlength won't allow the user to type more characters than those specified.
+        Autofocus focuses the selected input as soon as the user loads the page, it's a boolean attribute that doesn't need a value. -->
+      <input
+        type="email"
+        value="ettorej.bortolin@gmail.com"
+        placeholder="Email"
+        maxlength="30"
+        autofocus
+      />
+      <!-- Readonly prevents the user from changing the value,
+        you can put it together with "value" to supply a default one instead of leaving it empty.
+        There's also the "disabled" attribute, which doesn't even allow the user to select the input, and its value won't be sent to the server. -->
+      <input type="email" readonly value="..." />
+      <!-- Textareas don't have a value attribute, default values must be typed between tags. -->
+      <textarea>Comment...</textarea>
+    </form>
+  </body>
+</html>

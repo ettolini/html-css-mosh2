@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <!-- You usually want to keep checkboxes between divs, in case you need to reorganize them. -->
+      <div>
+        <!-- Checkbox inputs show a checkbox next to its label (if set), if you click the box or the label, it'll be checked. -->
+        <input type="checkbox" id="front-end" />
+        <!-- Milligram turns label into block-level elements, keep that in mind. The class label-inline fixes that. -->
+        <label for="front-end">Front-end</label>
+      </div>
+      <div>
+        <!-- "Checked" checks the checkbox by default. Could also use "disabled" to make the box unselectable. -->
+        <input type="checkbox" id="back-end" checked />
+        <label for="back-end">Back-end</label>
+      </div>
+    </form>
+  </body>
+</html>

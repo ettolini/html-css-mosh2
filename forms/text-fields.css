@@ -1,0 +1,9 @@
+form {
+  width: 50%;
+  padding: 2rem;
+}
+
+/* The textarea can be resized by default, you can stop this by setting that attribute to "none". */
+textarea {
+  resize: none;
+}

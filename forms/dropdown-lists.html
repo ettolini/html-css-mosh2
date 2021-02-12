@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <!-- The "multiple" attribute allows multiple options to be selected. -->
+      <select multiple>
+        <!-- The first option will be shown by default, you could leave it empty, use it as a placeholder... -->
+        <option value="">Choose your dinner...</option>
+        <!-- If you want to specify what option to show by default, you can apply the "selected" attribute. -->
+        <option value="1" selected>Burger</option>
+        <option value="2">Pizza</option>
+        <option value="3">Sushi</option>
+      </select>
+    </form>
+
+    <form>
+      <select>
+        <!-- With the "optgroup" tag, we can group our options. -->
+        <optgroup label="Front-end Courses">
+          <option value="1">HTML</option>
+          <option value="2">CSS</option>
+          <option value="3">JavaScript</option>
+        </optgroup>
+        <optgroup label="Back-end Courses">
+          <option value="1">Node.js</option>
+          <option value="2">ASP.NET</option>
+          <option value="3">Django</option>
+        </optgroup>
+      </select>
+    </form>
+  </body>
+</html>

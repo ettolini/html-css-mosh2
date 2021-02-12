@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Data validation is important because if you allow your website to recieve unwanted values, your website may break.
+    Hackers can also take advantage of that. -->
+    <form>
+      <!-- For text inputs: You can set the "required" attribute to force the user to input something before submitting.
+      You can control the min and max length of the string submitted, as a best practice always provide a maxlegth to avoid too long texts. -->
+      <input type="text" required minlength="3" maxlength="10" />
+      <button type="submit">Submit</button>
+      <!-- For numbers inputs: You can also use the previous attributes, as a best practice always provide a number range,
+      specially if you don't admit negative values. -->
+      <input type="numbers" required min="0" max="5" />
+      <button type="submit">Submit</button>
+      <!-- Date and email inputs already check if the submitted info is valid depending on its format. -->
+    </form>
+  </body>
+</html>

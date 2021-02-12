@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+    />
+  </head>
+  <body>
+    <form>
+      <!-- Remember to turn the autocomplete off, it gets in the way of the list.
+        (Autocomplete shows the user examples of previously submitted values) -->
+      <input type="text" list="countries" autocomplete="off" />
+      <!-- Datalists don't have shortcuts in VS Code, keep that in mind.
+          They show the user the sugestions specified in "options" as possible inputs, but the user is still free to type whatever they please. -->
+      <datalist id="countries">
+        <!-- You can use data-value to specify a value to send to the database when inputting a certain option (needs JavaScript too).
+              In this case, the numbers could be an unique identifier for each country. -->
+        <option data-value="1">Australia</option>
+        <option data-value="2">Canada</option>
+        <option data-value="3">India</option>
+        <option data-value="4">United States</option>
+      </datalist>
+      <!-- Another thing to keep in mind, datalists' appearance are different in every browser, if you try to directly apply styles to
+      datalists or options with CSS, the browser styles will take over anyway. To effectively do this, you'd need the help of JavaScript.  -->
+    </form>
+  </body>
+</html>

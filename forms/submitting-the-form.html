@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <!-- You can create an account in Formspree to test form submitting without using Backend tools. -->
+  <body>
+    <!-- You type to where the form will be submitted in the action attribute.
+    The method attribute can either be POST, that submits the form's info into the action url,
+    or it can be GET, that redefines the current url, saving the currently submitted info in it. That allows you to bookmark the info. -->
+    <form action="https://formspree.io/f/myybnlqn" method="POST">
+      <!-- Every input that's to be submitted must have a name attribute. -->
+      <input type="text" placeholder="Name" name="name" />
+      <input type="text" placeholder="Email" name="email" />
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
