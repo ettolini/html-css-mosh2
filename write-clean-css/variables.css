@@ -1,0 +1,15 @@
+/* You can define values in the root element (html, using the pseudo-selector).
+That way, you define your wanted values and re-utilize them however you want without needing to repeat the definition. */
+:root {
+  --color-primary: #ffdd36;
+  --border-size: 2px;
+  --border-radius: 10px;
+}
+
+.one {
+  background: var(--color-primary);
+}
+
+.two {
+  background: var(--color-primary);
+}

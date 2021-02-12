@@ -1,0 +1,21 @@
+-   Follow a naming convention.
+
+-   Create logical sections in your stylesheet.
+Separate basic styles (html, body...) from typography, forms, navigation bars... Better so if you do them in different stylesheets.
+
+-   Avoid over-specific selectors.
+If you can work your way around with only classes, not needing child selectors and what not, it'd be better.
+That doesn't mean those aren't useful. If you have the same item class in different containers,
+you may want to prefix those classes so you can properly manage each element from each container.
+
+-   Avoid !important.
+
+-   Sort CSS properties.
+Makes them easier to read and locate, you can select the properties you want to sort,
+use the Command Palette (Ctrl + Shift + P) and look for "Sort Lines Ascending". That commands takes care of that for you.
+
+-   Take advantage of style inheritance.
+
+-   Extract repetitive patterns.
+
+-   Avoid repetities values (keep it DRY [Don't Repeat Yourself]).
